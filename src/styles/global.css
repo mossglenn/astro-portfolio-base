@@ -1,1 +1,53 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+/* in your main.css or main.scss */
+@import 'flowbite/dist/flowbite.css';
+
+
+@theme {
+    /* === Brand Color === */
+    --color-brand: hsl(267 39% 48%);
+    --color-brand-light: hsl(267 39% 61%);
+    --color-brand-lighter: hsl(267 39% 70%);
+    --color-brand-dark: hsl(267 39% 39%);
+    --color-brand-darker: hsl(267 42% 30%);
+  
+    /* === Accent (Amber) === */
+    --color-accent: hsl(35 76% 60%);
+    --color-accent-light: hsl(35 80% 80%);
+    --color-accent-dark: hsl(25 65% 46%);
+    --color-accent-softer: hsl(46 68% 72%);
+  
+    /* === Backgrounds & Cards === */
+    --color-background: hsl(237 19% 15%);
+    --color-background-alt: hsl(237 19% 20%);
+    --color-card: hsl(240 20% 20%); /* original 214 15% 25%; */
+    --color-card-light: hsl(240 16% 70%);
+    --color-card-alt: hsl(216 30% 20%);
+    --color-card-dark: hsl(267 20% 18%);
+  
+    /* === Foreground/Text === */
+    --color-foreground: hsl(43 50% 95%);
+    --color-foreground-muted: hsl(267 39% 39%);
+    --color-foreground-light: hsl(0 0% 100%);
+    --color-foreground-dark: hsl(220 10% 8%);
+    --color-foreground-lavender: hsl(270 36% 92%);
+  
+    /* === Neutral / Muted === */
+    --color-neutral: hsl(258 22% 76%);
+    --color-neutral-dark: hsl(258 10% 65%);
+    --color-muted: hsl(310 18% 37%);
+    --color-muted-dark: hsl(310 28% 25%);
+  
+    /* === Secondary === */
+    --color-secondary: hsl(234 21% 27%);
+    --color-secondary-light: hsl(234 21% 39%);
+  
+    /* === Additional Color Tokens for Gradients === */
+    --color-sage: hsl(125 18% 71%);
+    --color-sky: hsl(195 42% 74%);
+    --color-slate-light: hsl(234 21% 27%);
+    --color-pink: hsl(324 69% 79%);
+    --color-lavender: hsl(256 100% 75%);
+    --color-lavender-light: hsl(270 36% 75%);
+  }
+  
