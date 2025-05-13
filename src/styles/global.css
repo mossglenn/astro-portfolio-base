@@ -1,7 +1,7 @@
 @import "tailwindcss";
-/* in your main.css or main.scss */
-@import 'flowbite/dist/flowbite.css';
-
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../../node_modules/flowbite";
 
 @theme {
     /* === Brand Color === */
@@ -10,6 +10,12 @@
     --color-brand-lighter: hsl(267 39% 70%);
     --color-brand-dark: hsl(267 39% 39%);
     --color-brand-darker: hsl(267 42% 30%);
+
+    --color-primary: var(--color-brand);
+    --color-primary-light: var(--color-brand-light);
+    --color-primary-lighter: var(--color-brand-lighter);
+    --color-primary-dark:  var(--color-brand-dark);
+    --color-primary-darker: var(--color-brand-darker);
   
     /* === Accent (Amber) === */
     --color-accent: hsl(35 76% 60%);

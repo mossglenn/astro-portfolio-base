@@ -17,6 +17,7 @@
     "@types/canvas-confetti": "^1.9.0",
     "astro": "^5.7.12",
     "astro-icon": "^1.1.5",
+    "astro-seo": "^0.8.4",
     "astro-show-tailwindcss-breakpoint": "^1.0.9",
     "canvas-confetti": "^1.9.3",
     "flowbite": "^3.1.2",

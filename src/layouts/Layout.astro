@@ -1,0 +1,35 @@
+---
+import { SEO } from 'astro-seo';
+import '../styles/global.css';
+import 'flowbite';
+import ogImage from '../assets/images/og-image.png';
+
+const { content } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Astro SEO -->
+    <SEO
+      title={content.title ?? 'My Portfolio'}
+      description={content.description ??
+        'Showcasing projects in instructional design and web development.'}
+      canonical={Astro.url.pathname}
+      openGraph={{
+        basic: {
+          title: content.title ?? 'My Portfolio',
+          type: 'website',
+          image: content.image ?? ogImage.src,
+        },
+      }}
+    />
+  </head>
+
+  <body class="bg-background text-foreground antialiased">
+    <slot />
+  </body>
+</html>

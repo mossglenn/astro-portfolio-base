@@ -1,0 +1,79 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Navbar from '@/components/layout/Navbar.astro';
+import ProjectTags from '@/components/layout/ProjectTags.astro';
+import Hero from '@/components/layout/Hero.astro';
+import { Image } from 'astro:assets';
+import EnrollmentJourney from '@assets/images/enrollment-journey.png';
+import { Icon } from 'astro-icon/components';
+const content = {
+  title: 'Project Details',
+  description: 'Details about the project.',
+  featuredimage: EnrollmentJourney,
+  tags: [
+    {
+      text: 'Instructional Design',
+      href: '#',
+    },
+    {
+      text: 'Articulate Storyline',
+      href: '#',
+    },
+    {
+      text: 'Agile-like',
+      href: '#',
+    },
+  ],
+};
+---
+
+<Layout content={content}>
+  <Navbar />
+  <Hero content={content}>
+    <div slot="headline">
+      <h1
+        class="mb-4 text-4xl leading-none font-extrabold tracking-normal text-white md:text-5xl lg:text-6xl"
+      >
+        An <span class="text-accent">Agile-inspired</span> Approach to Instructional Program Design
+      </h1>
+      <p
+        class="text-card-light mb-8 text-2xl font-bold tracking-tight sm:px-16 lg:px-18 lg:text-3xl"
+      >
+        Faced with a complex subject and short lead times, iterating from a minimum viable training
+        ensures rapid, need-driven content development
+      </p>
+    </div>
+    <h2 slot="project-title" class="text-foreground mx-auto py-6 text-3xl font-bold">
+      Genetics Learning Program
+    </h2>
+
+    <div slot="project-highlights">
+      <p class="py-2">
+        <span class="text-accent text-base font-bold">Agile-inspired workflow:</span><br />Delivered
+        genetics training in weeks, not months, by iterating on real-time learner needs.
+      </p>
+      <p class="py-2">
+        <span class="text-accent text-base font-bold">Multi-tiered, self-directed learning:</span
+        ><br />Allowed staff to customize training based on expertise level.
+      </p>
+      <p class="py-2">
+        <span class="text-accent text-base font-bold">Scalable & sustainable:</span><br />Integrated
+        into TEP and structured for continuous updates as genetics research evolves.
+      </p>
+    </div>
+  </Hero>
+  <ProjectTags content={content} />
+  <div class="px-2">
+    <Icon name="icon-time-bomb" />
+    <h3 class="text-accent py-2 text-3xl font-bold">Design Problem</h3>
+    <p>
+      Even the basics of genetics education are vast and complex, so delaying training until we had
+      a fully analyzed curriculum wasn’t an option—staff were already fielding questions about DNA,
+      genetic testing, and privacy. Instead of spending months mapping every learning objective in
+      detail, we took an agile-inspired approach: defining broad learning domains, launching an MVP
+      training in weeks, and refining it based on real-time learner feedback. This allowed us to
+      scale genetics education efficiently while ensuring staff had the confidence to discuss
+      genetic research, privacy, and ethics in an accurate and culturally responsive way.
+    </p>
+  </div>
+</Layout>

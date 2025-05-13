@@ -1,0 +1,27 @@
+---
+const { content } = Astro.props;
+import { Image } from 'astro:assets';
+---
+
+<div
+  class="bg-card bg-center bg-no-repeat bg-blend-multiply md:px-8 md:py-8"
+  style={`background-image: url('${content.featuredimage.src}`}
+>
+  <div class="mx-auto px-4 pt-24 text-center lg:py-24">
+    <slot name="headline" />
+  </div>
+
+  <div class="border-card-light bg-card/80 mx-2 rounded-lg border shadow-sm">
+    <div class="flex flex-col items-center text-center">
+      <slot name="project-title" />
+      <Image
+        src={content.featuredimage}
+        alt=""
+        class="px-2sm:max-w-sm max-w-xs rounded-t-lg md:max-w-md"
+      />
+      <div class="p-4 text-sm">
+        <slot name="project-highlights" />
+      </div>
+    </div>
+  </div>
+</div>

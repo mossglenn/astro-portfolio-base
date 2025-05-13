@@ -1,0 +1,22 @@
+---
+const { content } = Astro.props;
+const projectTags = content.tags ?? [];
+---
+
+<section class="px-1 py-4 lg:py-16">
+  <button
+    type="button"
+    class="bg-brand-darker text-foreground-lavender hover:bg-brand-dark focus:ring-brand mb-2 rounded-full px-5 py-2.5 text-center text-xs font-medium focus:ring-2 focus:outline-none"
+    >Instructional Design</button
+  >
+  <button
+    type="button"
+    class="bg-brand-darker text-foreground-lavender hover:bg-brand-dark focus:ring-brand mb-2 rounded-full px-5 py-2.5 text-center text-xs font-medium focus:ring-2 focus:outline-none"
+    >Articulate Storyline</button
+  >
+  <button
+    type="button"
+    class="bg-brand-darker text-foreground-lavender hover:bg-brand-dark focus:ring-brand mb-2 rounded-full px-5 py-2.5 text-center text-xs font-medium focus:ring-2 focus:outline-none"
+    >Agile-like</button
+  >
+</section>

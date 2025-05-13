@@ -1,0 +1,69 @@
+---
+import 'flowbite';
+import Neuron300 from '@assets/images/neuron-300.png';
+import { Image } from 'astro:assets';
+---
+
+<nav class="bg-card-dark fixed start-0 top-0 z-20 w-full border-b border-black">
+  <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+    <a href="https://amosglenn.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <Image src={Neuron300} alt="Neuron" height={24} class="rounded-lg bg-white px-2 py-2" />
+      <span class="self-center text-2xl font-semibold whitespace-nowrap">AmosGlenn</span>
+    </a>
+    <div class="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
+      <button
+        type="button"
+        class="bg-background hover:bg-brand-darker focus:ring-brand ring-brand hidden rounded-lg px-4 py-2 text-center text-sm font-medium text-white ring-1 focus:ring-4 focus:outline-none sm:inline-flex"
+        >Get started</button
+      >
+      <button
+        data-collapse-toggle="navbar-sticky"
+        type="button"
+        class="hover:bg-accent bg-brand hover:text-brand inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-white focus:ring-2 focus:ring-white focus:outline-none md:hidden"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="h-5 w-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
+      id="navbar-sticky"
+    >
+      <ul
+        class="bg-background mt-4 flex flex-col rounded-lg border p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse"
+      >
+        <li>
+          <a
+            href="#"
+            class="hover:bg-brand block rounded-sm px-3 py-2 text-white"
+            aria-current="page">Home</a
+          >
+        </li>
+        <li>
+          <a href="#" class="hover:bg-brand block rounded-sm px-3 py-2 text-white">About</a>
+        </li>
+        <li>
+          <a href="#" class="hover:bg-brand block rounded-sm px-3 py-2 text-white">Portfolio</a>
+        </li>
+        <li>
+          <a href="#" class="hover:bg-brand block rounded-sm px-3 py-2 text-white">Other</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

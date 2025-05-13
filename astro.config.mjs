@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
+import icon from 'astro-icon';
 
 import showTailwindcssBreakpoint from 'astro-show-tailwindcss-breakpoint';
 
@@ -25,5 +26,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [showTailwindcssBreakpoint()],
+  integrations: [showTailwindcssBreakpoint(), icon()],
 });
